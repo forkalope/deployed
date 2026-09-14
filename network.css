@@ -1,0 +1,49 @@
+.hero { grid-template-columns: minmax(0, 1.15fr) minmax(340px, .85fr); gap: 60px; }
+.hero h1 { font-size: clamp(62px, 7.6vw, 103px); }
+.hero-note { margin: 23px 0 0; color: var(--soft); font-size: 12px; line-height: 1.5; }
+.current-build-section { display: grid; grid-template-columns: minmax(250px, .75fr) minmax(0, 1.25fr); gap: clamp(58px, 10vw, 150px); padding: 82px 0 94px; border-bottom: 1px solid var(--line); scroll-margin-top: 88px; }
+.build-status-panel { padding: 21px; border: 1px solid rgba(167,189,145,.26); border-radius: 6px; background: rgba(167,189,145,.045); }
+.build-status-top { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding-bottom: 14px; border-bottom: 1px solid var(--line); color: var(--faint); font-size: 10px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+.build-status-label { color: var(--green); }
+.build-status-row { display: flex; justify-content: space-between; gap: 22px; padding: 14px 0; border-bottom: 1px solid var(--line); color: var(--soft); font-size: 13px; line-height: 1.4; }
+.build-status-row strong { flex-shrink: 0; color: var(--ink); font-size: 11px; font-weight: 650; text-align: right; }
+.build-status-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 20px; margin-top: 20px; }
+.build-status-actions .button { min-height: 40px; }
+.partner-callout { display: grid; grid-template-columns: minmax(250px, .75fr) minmax(0, 1.25fr); gap: clamp(58px, 10vw, 150px); padding: 88px 0 96px; border-bottom: 1px solid var(--line); }
+.partner-callout h2 { max-width: 560px; font-size: clamp(38px, 5vw, 66px); }
+.partner-callout > div:last-child { max-width: 635px; padding-top: 4px; }
+.partner-callout > div:last-child > p { margin: 0 0 22px; color: var(--soft); font-size: 18px; line-height: 1.65; }
+.partner-callout .text-link { color: var(--coral-bright); }
+.faq-section { display: grid; grid-template-columns: minmax(250px, .75fr) minmax(0, 1.25fr); gap: clamp(58px, 10vw, 150px); padding: 88px 0 96px; border-bottom: 1px solid var(--line); scroll-margin-top: 88px; }
+.faq-section h2 { max-width: 560px; font-size: clamp(38px, 5vw, 66px); }
+.faq-teaser { max-width: 635px; padding-top: 4px; }
+.faq-teaser p { margin: 0 0 22px; color: var(--soft); font-size: 18px; line-height: 1.65; }
+.faq-teaser .text-link { color: var(--coral-bright); }
+.network-body .network-caveat { margin-top: 24px; color: var(--soft); font-size: 12px; line-height: 1.65; }
+.membership-section { padding: 100px 0; border-bottom: 1px solid var(--line); scroll-margin-top: 90px; }
+.membership-intro { max-width: 600px; margin: 28px 0 36px; color: var(--soft); font-size: 17px; line-height: 1.65; }
+.membership-intro p:last-child { color: var(--coral-bright); font-size: 12px; }
+.membership-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.membership-grid article { display: flex; flex-direction: column; padding: 28px; border: 1px solid var(--line); border-radius: 6px; background: var(--bg-raised); }
+.membership-grid article:last-child { border-color: rgba(241, 116, 95, .6); }
+.membership-grid h3 { margin: 0 0 22px; font-size: 44px; letter-spacing: -.055em; }
+.membership-grid h3 span { color: var(--soft); font-size: 13px; font-weight: 400; letter-spacing: 0; }
+.membership-grid article > p:not(.eyebrow) { color: var(--soft); font-size: 14px; line-height: 1.65; }
+.membership-grid .text-link { padding-top: 18px; margin-top: auto; color: var(--coral-bright); }
+.membership-footnote { max-width: 800px; margin: 24px 0 0; color: var(--soft); font-size: 12px; line-height: 1.65; }
+.source-section { border-bottom: 1px solid var(--line); }
+@media (max-width: 960px) {
+  .hero { grid-template-columns: 1fr; }
+  .hero h1 { font-size: clamp(62px, 11vw, 96px); }
+  .membership-grid { gap: 12px; }
+  .membership-grid article { padding: 20px; }
+  .current-build-section, .partner-callout, .faq-section { grid-template-columns: 1fr; gap: 36px; }
+}
+@media (max-width: 720px) {
+  .hero h1 { font-size: clamp(47px, 12.5vw, 74px); }
+  .membership-section { padding: 74px 0; }
+  .current-build-section, .partner-callout, .faq-section { padding: 70px 0 76px; }
+  .membership-grid { grid-template-columns: 1fr; }
+  .membership-grid article { padding: 25px; }
+  .hero-visual .visual-node strong { max-width: 115px; line-height: 1.4; }
+}
